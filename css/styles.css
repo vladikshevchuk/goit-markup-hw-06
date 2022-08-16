@@ -931,6 +931,10 @@ footer .submit .icon-send {
   cursor: pointer;
 }
 
+.backdrop .button:hover {
+  fill: #2196F3;
+}
+
 .modal-info {
   display: flex;
   flex-direction: column;
@@ -974,9 +978,51 @@ footer .submit .icon-send {
   height: 40px;
   margin-top: 4px;
   margin-bottom: 10px;
+  padding-left: 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+
+.data-name input:focus-within + input{
+
+}
+
+.data-name {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.modal-info .data .persone {
+  fill: currentColor;
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/person-black.svg);
+
+  position: absolute;
+  margin-left: 12px;
+  bottom: 21px;
+}
+
+.modal-info .data .phone {
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/phone-black.svg);
+
+  position: absolute;
+  margin-left: 12px;
+  bottom: 21px;
+}
+
+.modal-info .data .mail {
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/email-black.svg);
+
+  position: absolute;
+  margin-left: 12px;
+  bottom: 21px;
 }
 
 .modal-info .data textarea {
@@ -988,22 +1034,51 @@ footer .submit .icon-send {
   
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
 
+.modal-info .data textarea::placeholder {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 16px;
   letter-spacing: 0.01em;
   
   color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-info .policy {
+  display: flex;
   margin-top: 20px;
+  align-items: center;
+}
+
+.policy input {
+  appearance: none;
+}
+
+.policy .checkbox-icon {
+  pointer-events: none;
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+}
+
+input:checked + .checkbox-icon {
+  border-color: transparent;
+  background-color: #2196F3;
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-origin:content-box;
+  background-repeat: no-repeat;
 }
 
 .modal-info .policy label {
+  padding-left: 24.38px;
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
